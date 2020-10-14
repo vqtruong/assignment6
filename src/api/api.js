@@ -2,7 +2,7 @@ export function follow(name) {
     let data = {
         id: name
     }
-    return fetch(`http://localhost:4000/following`, {
+    return fetch(`/api/following`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -17,15 +17,13 @@ export function follow(name) {
 }
 
 export function unfollow(id) {
-    return fetch(`http://localhost:4000/following/${id}`, {
+    return fetch(`/api/following/${id}`, {
         method: "delete",
     })
 }
 
-
-
 export function getAllFollowed() {
-    return fetch("/following", {
+    return fetch("/api/following", {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
