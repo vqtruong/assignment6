@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./styles.css"
 
 function Modal( { modalContent }) {
 
 
     function format(str) {
-        if (str == null || str == undefined) {
+        if (str === null || str === undefined) {
             str = "n/a";
         }
         return str;

@@ -52,11 +52,11 @@ function RepoModal( { repoLink, author }) {
                     </div>
                     
                     <div className="modal-body">
-                        { (repoList.length != 0 && repoList != undefined) && repoList.map((repo) => {
+                        { (repoList.length !== 0 && repoList !== undefined) && repoList.map((repo) => {
                             return (
                                 <div className="user-repo">
                                     <div>
-                                        <a href={repo.html_url} target="_blank">
+                                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                                             <h5>{repo.name}:</h5>
                                         </a>
                                     </div>
